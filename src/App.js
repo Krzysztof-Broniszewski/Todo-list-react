@@ -19,10 +19,7 @@ function App() {
           <h2 class="section__header">Dodaj nowe zadanie</h2>
         </div>
         <div class="section__container">
-          <form class="form js-form">
-            <input class="form__input js-newTask" placeholder="Co jest do zrobienia?"/>
-              <button class="form__button js-button">Dodaj zadanie</button>
-          </form>
+          <Form/>
         </div>
       </section>
       <section class="section">
