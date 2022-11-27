@@ -1,10 +1,11 @@
 # DEMO: https://krzysztof-broniszewski.github.io/Todo-list-react/
 
 # This is a Todo List in React.js, first project for course of JavaScript in YouCode course.
-In future i will add the interactions, but now it was maked by the course lesson. 
+In future i will add the interactions, but now it was maked by the course lesson only. 
 
 # Used technologies:
 - React.js
+- Node.js
 - JavaScript ES6+
 - HTML
 - CSS
@@ -26,11 +27,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
