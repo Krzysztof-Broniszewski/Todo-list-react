@@ -19,7 +19,7 @@ function App() {
           <h2 class="section__header">Dodaj nowe zadanie</h2>
         </div>
         <div class="section__container">
-          <Form/>
+          <Form />
         </div>
       </section>
       <section class="section">
@@ -29,8 +29,7 @@ function App() {
           <button class="section__taskButton section__buttonDoneAll js-finish">Ukończ wszystkie</button>
         </div>
         <div class="section__container">
-          <ul class="tasks js-tasks">
-          </ul>
+          <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
         </div>
       </section>
     </main>
