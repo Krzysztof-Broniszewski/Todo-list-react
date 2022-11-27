@@ -3,6 +3,9 @@
 # This is a Todo List in React.js, first project for course of JavaScript in YouCode course.
 In future i will add the interactions, but now it was maked by the course lesson only. 
 
+# Demo screen:
+![Demo screen](https://i.ibb.co/cv3dt6M/Demo-screen.jpg)
+
 # Used technologies:
 - React.js
 - Node.js
