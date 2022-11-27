@@ -1,4 +1,4 @@
-const Buttons = (tasks, hideDoneTasks) => {
+const Buttons = ({ tasks, hideDoneTasks }) => {
     if (tasks.length === 0) {
         return null;
     }
@@ -10,7 +10,7 @@ const Buttons = (tasks, hideDoneTasks) => {
             </button>
             <button
                 className="section__taskButton section__buttonDoneAll"
-                // disabled={tasks.every(({ done }) => done)}
+                disabled={tasks.every(({ done }) => done)}
                 >
                 Ukończ wszystkie
             </button>

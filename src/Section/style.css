@@ -1,0 +1,46 @@
+.section {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin: 10px;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.section__header {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.section__container {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    margin: 1px;
+}
+
+.section__containerTasks {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 15px;
+}
+
+@media (max-width: 767px) {
+    .section__containerTasks {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__taskButton {
+    cursor: pointer;
+    background: transparent;
+    color: hsl(180, 100%, 25%);
+    border: none;
+    padding: 15px;
+}
+
+.section__taskButton:hover {
+    color: hsl(180, 100%, 30%);
+}

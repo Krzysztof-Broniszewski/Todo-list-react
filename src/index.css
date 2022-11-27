@@ -9,12 +9,7 @@ html {
   box-sizing: inherit;
 }
 
-.body {
+#root {
+  height: 100vh;
   background-color: #eee;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
 }
