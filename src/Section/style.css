@@ -1,11 +1,11 @@
 .section {
+    background-color: #fff;
     display: grid;
     grid-template-rows: 1fr auto;
-    margin: 10px;
-    box-shadow: 0 0 5px #ddd;
+    margin: 10px 0;
 }
 
-.section__header {
+.section__title {
     padding: 0;
     margin: 0;
     font-weight: bold;
@@ -16,14 +16,12 @@
     display: grid;
     grid-template-columns: 1fr auto auto;
     align-items: center;
-    background-color: #fff;
+    box-shadow: 0 0 5px #ddd;
     padding: 20px;
     margin: 1px;
 }
 
 .section__containerTasks {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
     grid-gap: 15px;
 }
 
@@ -31,16 +29,4 @@
     .section__containerTasks {
         grid-template-columns: 1fr;
     }
-}
-
-.section__taskButton {
-    cursor: pointer;
-    background: transparent;
-    color: hsl(180, 100%, 25%);
-    border: none;
-    padding: 15px;
-}
-
-.section__taskButton:hover {
-    color: hsl(180, 100%, 30%);
 }

@@ -1,0 +1,11 @@
+.buttons {
+    cursor: pointer;
+    background: transparent;
+    color: hsl(180, 100%, 25%);
+    border: none;
+    padding: 15px;
+}
+
+.buttons:hover {
+    color: hsl(180, 100%, 30%);
+}
