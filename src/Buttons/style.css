@@ -1,13 +1,17 @@
 .buttons__button {
-    width: 100px;
-    height: 20px;
     cursor: pointer;
     background: transparent;
     color: hsl(180, 100%, 25%);
-    border: 1px solid red;
+    border: none;
     padding: 15px;
 }
 
-.buttons:hover {
+.buttons__button:hover {
     color: hsl(180, 100%, 30%);
+    transform: scale(115%);
+    transition-duration: .5s;
+}
+
+.buttons__buttton:disabled {
+    color: #ccc;
 }
