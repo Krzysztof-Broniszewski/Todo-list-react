@@ -13,6 +13,6 @@
 }
 
 .buttons__buttton:disabled {
-    color: #ccc;
+    color: red;
     transform: none;
 }
