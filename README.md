@@ -14,6 +14,9 @@ In future i will add the interactions, but now it was maked by the course lesson
 - CSS
 - Normalize.css
 - BEM convension
+- useState
+- UseEffect
+- Local Storage
 
 # Getting Started with Create React App
 
