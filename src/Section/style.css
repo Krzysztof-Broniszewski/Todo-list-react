@@ -1,9 +1,0 @@
-.section__containerTasks {
-    grid-gap: 15px;
-}
-
-@media (max-width: 767px) {
-    .section__containerTasks {
-        grid-template-columns: 1fr;
-    }
-}

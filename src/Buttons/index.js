@@ -1,4 +1,5 @@
 import { Button } from "./styled"
+import { theme } from "../theme";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
 
@@ -6,15 +7,15 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
         {tasks.length > 0 && (
             <>
                 <Button
+                    theme={theme}
                     onClick={toggleHideDone}
-                    className="buttons__button"
                     >
                     {hideDone ? "Pokaż " : "Ukryj "}
                     ukończone
                 </Button>
                 <Button
+                    theme={theme}
                     onClick={setAllDone}
-                    className="buttons__button"
                     disabled={tasks.every(({ done }) => done)}
                 >
                     Ukończ wszystkie

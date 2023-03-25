@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSection = styled.section`
-    background-color: #fff;
+    background-color: ${({theme}) => theme.color.white};
     display: grid;
     grid-template-rows: 1fr auto;
     margin: 10px 0;

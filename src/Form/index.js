@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import "./style.css";
+import { Input, StyledForm, FormButton } from "./styled";
+import { theme } from "../theme";
 
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
@@ -18,18 +19,22 @@ const Form = ({ addNewTask }) => {
     };
 
     return (
-        <form
-            className="form"
+        <StyledForm
+            theme = {theme}
             onSubmit={onFormSubmit}
         >
-            <input
+            <Input
+                theme={theme}
                 value={newTaskContent}
-                className="form__input"
                 placeholder="Co jest do zrobienia?"
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
-            <button className="form__button">Dodaj zadanie</button>
-        </form>
+            <FormButton
+                theme={theme}
+            >
+                Dodaj zadanie
+            </FormButton>
+        </StyledForm>
     );
 };
 

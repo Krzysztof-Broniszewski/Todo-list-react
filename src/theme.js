@@ -5,11 +5,12 @@ export const theme = {
         alto: "#ddd",
         gallery: "#eee",
         white: "#fff",
-        teal: "#oo8080",
+        teal: "#008080",
         crimson: "#db143c",
         forestGreen: "#228c22",
     },
     breakpoint: {
         mobileMax: 767,
+        mobileMid: 500,
     },
 };
