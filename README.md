@@ -17,6 +17,7 @@ In future i will add the interactions, but now it was maked by the course lesson
 - useState
 - UseEffect
 - Local Storage
+- Styled Components
 
 # Getting Started with Create React App
 
