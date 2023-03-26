@@ -34,7 +34,35 @@ export const Button = styled.button`
     height: 30px;
     padding: 0;
     margin: 10px;
+`;
 
-    
-`
+export const DoneButton = styled(Button)`
+    background: ${({ theme }) => theme.color.forestGreen};
+
+    &:hover {
+        filter: brightness(120%);
+        transform: scale(120%);
+        transition-duration: .5s;
+    }
+
+    &:active {
+        filter: brightness(140%);
+        transition-duration: 0s;
+    }
+`;
+
+export const RemoveButton = styled(Button)`
+    background: ${({ theme }) => theme.color.crimson};
+
+    &:hover {
+        filter: brightness(120%);
+        transform: scale(120%);
+        transition-duration: .5s;
+    }
+
+    &:active {
+        filter: brightness(140%);
+        transition-duration: 0s;
+    }
+`;
 
