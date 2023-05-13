@@ -13,7 +13,7 @@ export const Item = styled.li`
     align-items: center;
     grid-gap: 10px;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${({theme}) => theme.color.alto};
 
     ${({ hidden }) => hidden && css`
         display: none;
@@ -29,30 +29,19 @@ export const Content = styled.span`
 export const Button = styled.button`
     cursor: pointer;
     border: none;
-    color: white;
+    color: ${({theme}) => theme.color.white};
     width: 30px;
     height: 30px;
     padding: 0;
     margin: 10px;
-`;
 
-export const DoneButton = styled(Button)`
-    background: ${({ theme }) => theme.color.forestGreen};
+    ${({ toggleDone }) => toggleDone && css`
+        background: ${({ theme }) => theme.color.forestGreen};
+    `}
 
-    &:hover {
-        filter: brightness(120%);
-        transform: scale(120%);
-        transition-duration: .5s;
-    }
-
-    &:active {
-        filter: brightness(140%);
-        transition-duration: 0s;
-    }
-`;
-
-export const RemoveButton = styled(Button)`
-    background: ${({ theme }) => theme.color.crimson};
+    ${({ remove }) => remove && css`
+        background: ${({ theme }) => theme.color.crimson};
+    `}
 
     &:hover {
         filter: brightness(120%);
@@ -65,4 +54,26 @@ export const RemoveButton = styled(Button)`
         transition-duration: 0s;
     }
 `;
+
+    
+
+    
+
+    
+// `;
+
+// export const RemoveButton = styled(Button)`
+//     background: ${({ theme }) => theme.color.crimson};
+
+//     &:hover {
+//         filter: brightness(120%);
+//         transform: scale(120%);
+//         transition-duration: .5s;
+//     }
+
+//     &:active {
+//         filter: brightness(140%);
+//         transition-duration: 0s;
+//     }
+// `;
 

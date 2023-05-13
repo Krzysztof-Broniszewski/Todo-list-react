@@ -11,7 +11,7 @@ export const StyledSectionContainer = styled.section`
     display: grid;
     grid-template-columns: 1fr auto auto;
     align-items: center;
-    box-shadow: 0 0 5px #ddd;
+    box-shadow: 0 0 5px ${({theme}) => theme.color.alto};
     padding: 20px;
     margin: 1px;
 `;
