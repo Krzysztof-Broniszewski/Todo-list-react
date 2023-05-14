@@ -16,6 +16,7 @@ In future i will add the interactions, but now it was maked by the course lesson
 - BEM convension
 - useState
 - UseEffect
+- Custom Hooks
 - Local Storage
 - Styled Components
 - theme
