@@ -19,7 +19,7 @@ In future i will add the interactions, but now it was maked by the course lesson
 - Custom Hooks
 - Local Storage
 - Styled Components
-- theme
+- Theme
 
 # Getting Started with Create React App
 
