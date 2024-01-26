@@ -1,5 +1,5 @@
 import { Button } from "./styled"
-import { theme } from "../theme";
+import { theme } from "../../../theme";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
 

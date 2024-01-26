@@ -1,5 +1,5 @@
 import { StyledSection, StyledSectionContainer, StyledSectionTitle } from "./styled";
-import { theme } from "../theme";
+import { theme } from "../../theme";
 
 const Section = ({ title, body, extraHeaderContent }) => (
     <StyledSection theme={theme}>

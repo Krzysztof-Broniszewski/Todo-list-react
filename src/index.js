@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
 import { theme } from "./theme";
 import { configureStore } from '@reduxjs/toolkit';
+import App from './App';
 
 const initialState = {
   tasks: [],
@@ -28,14 +28,6 @@ const tasksReducer = (state = initialState, action) => {
   }
 };
 
-const addTaskAction = {
-  type: "addTask",
-  payload: "Nauczyć się Reduxa",
-};
-
-// tasksReducer(initialState, addTaskAction);
-// console.log(state.tasks);
-
 const selectTasks = ({ tasks }) => tasks;
 
 const store = configureStore({ reducer: tasksReducer });
@@ -43,13 +35,13 @@ console.log(selectTasks(store.getState()));
 
 store.dispatch({
   type: "addTask",
-  payload: "Nauczyć się dispatch",
+  payload: "Task nr 1",
 });
 console.log(selectTasks(store.getState()));
 
 store.dispatch({
   type: "addTask",
-  payload: "Nauczyć się hooków",
+  payload: "Task nr 2",
 });
 console.log(selectTasks(store.getState()));
 
