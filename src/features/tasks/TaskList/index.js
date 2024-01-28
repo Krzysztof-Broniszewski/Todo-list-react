@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { List, Item, Content, Button } from "./styled";
 import { theme } from "../../../theme";
-import { selectTasks, toggleTaskDone } from "../taskSlice";
+import { selectTasks, selectHideDone, toggleTaskDone, removeTask } from "../taskSlice";
 
-const TaskList = ({ removeTask }) => {
-    const { tasks, hideDone } = useSelector(selectTasks);
+const TaskList = () => {
+    const tasks = useSelector(selectTasks);
+    const hideDone = useSelector(selectHideDone);
     const dispatch = useDispatch();
     return (
         <List>
@@ -26,7 +27,7 @@ const TaskList = ({ removeTask }) => {
                     <Button
                         remove
                         theme={theme}
-                        onClick={() => removeTask(task.id)}
+                        onClick={() => dispatch(removeTask(task.id))}
                     >
                         🗑
                     </Button>

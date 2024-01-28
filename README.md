@@ -7,7 +7,10 @@ In future i will add the interactions, but now it was maked by the course lesson
 ![Demo screen](https://i.ibb.co/cv3dt6M/Demo-screen.jpg)
 
 # Used technologies:
+- Redux (useSelector, useDispatch, Reducers)
 - React.js
+- Store (ConfigureStore)
+- Features (common, features)
 - Node.js
 - JavaScript ES6+
 - HTML
