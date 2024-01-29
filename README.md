@@ -8,6 +8,8 @@ In future i will add the interactions, but now it was maked by the course lesson
 
 # Used technologies:
 - Redux (useSelector, useDispatch, Reducers)
+- Saga
+- Generators
 - React.js
 - Store (ConfigureStore)
 - Features (common, features)
