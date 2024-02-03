@@ -10,11 +10,11 @@ const author = () => (
     <Section
       title="Krzysztof Broniszewski"
       body={
-        <>nanana</>
+        <>Tu będą jakieś dane w przyszłości...</>
       }   
     />
     <Section
-      title="Opis"
+      title="CURRICULUM VITAE"
     />
   </Container>
 );

@@ -9,8 +9,7 @@ const store = configureStore({
   reducer: {
     tasks: tasksReducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(sagaMiddleware),
+  middleware: () => [sagaMiddleware],
 });
 
 sagaMiddleware.run(watchFetchExampleTasks);

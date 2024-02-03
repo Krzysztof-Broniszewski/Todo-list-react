@@ -9,8 +9,10 @@ In future i will add the interactions, but now it was maked by the course lesson
 # Used technologies:
 - Redux (useSelector, useDispatch, Reducers)
 - Saga
+- React Router
 - Generators
 - React.js
+- Import exampleTasks.json data from file
 - Store (ConfigureStore)
 - Features (common, features)
 - Node.js
