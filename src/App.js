@@ -1,7 +1,8 @@
-import { HashRouter, Switch, Route, Link } from "react-router-dom";
-import Tasks from "./features/tasks/Tasks";
+import { HashRouter, Switch, Route, NavLink, Redirect } from "react-router-dom";
+import TasksPage from "./features/tasks/TasksPage";
 import Author from "./features/author/Author";
-import { StyledNav, StyledUl, StyledLiItem} from "./styled";
+import { StyledNav, StyledUl, StyledLiItem } from "./styled";
+import TaskPage from "./features/tasks/TaskPage";
 
 // eslint-disable-next-line
 export default () => (
@@ -9,23 +10,28 @@ export default () => (
     <StyledNav>
       <StyledUl>
         <StyledLiItem>
-          <Link to="/zadania">Zadania</Link>
+          <NavLink activeClassName="active" to="/zadania">
+            Zadania
+          </NavLink>
         </StyledLiItem>
         <StyledLiItem>
-          <Link to="/author">O autorze</Link>
+          <NavLink activeClassName="active" to="/author">
+            O autorze
+          </NavLink>
         </StyledLiItem>
       </StyledUl>
       <Switch>
+        <Route path="/zadania/:id">
+          <TaskPage />
+        </Route>
         <Route path="/zadania">
-          <Tasks />
+          <TasksPage />
         </Route>
         <Route path="/author">
           <Author />
         </Route>
         <Route path="/">
-          <div>
-            Nie znaleziono strony !
-          </div>
+          <Redirect to="/zadania" />
         </Route>
       </Switch>
     </StyledNav>

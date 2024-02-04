@@ -11,7 +11,7 @@ import { StyledInput } from "./Search/styled";
 import { fetchExampleTasks } from "./taskSlice";
 import { SearchButton } from "./Search/styled";
 
-function Tasks() {
+function TasksPage() {
   const dispatch = useDispatch();
   return (
     <Container>
@@ -43,4 +43,4 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default TasksPage;

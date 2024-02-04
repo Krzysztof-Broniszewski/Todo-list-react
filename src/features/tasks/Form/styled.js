@@ -11,19 +11,26 @@ export const StyledForm = styled.form`
 `;
 
 export const Input = styled.input`
-    margin-right: 20px;
-    padding: 10px;
-    border: 1px solid ${({ theme }) => theme.color.alto};
+  margin-right: 20px;
+  width: 1fr;
+  padding: 10px;
+  border: 1px solid ${({ theme }) => theme.color.alto};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    grid-template-columns: 1fr;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 `;
 
 export const FormButton = styled.button`
     cursor: pointer;
-    min-widh: 140px;
+    min-width: 140px;
     background-color: ${({theme}) => theme.color.teal};
     border: none;
     color: white;
     padding: 10px;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     border: none;
 
     &:hover {

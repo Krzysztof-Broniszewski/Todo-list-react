@@ -5,6 +5,11 @@ export const StyledInput = styled.input`
   width: 1fr;
   padding: 10px;
   border: 1px solid ${({ theme }) => theme.color.alto};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    grid-template-columns: 1fr;
+    margin-right: 0;
+  }
 `;
 
 export const SearchButton = styled.button`
