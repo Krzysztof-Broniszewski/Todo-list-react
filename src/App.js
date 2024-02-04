@@ -1,20 +1,20 @@
 import { HashRouter, Switch, Route, Link } from "react-router-dom";
 import Tasks from "./features/tasks/Tasks";
 import Author from "./features/author/Author";
-import { StyledNav, StyledLiItem} from "./styled";
+import { StyledNav, StyledUl, StyledLiItem} from "./styled";
 
 // eslint-disable-next-line
 export default () => (
   <HashRouter>
     <StyledNav>
-      <ul>
+      <StyledUl>
         <StyledLiItem>
           <Link to="/zadania">Zadania</Link>
         </StyledLiItem>
         <StyledLiItem>
           <Link to="/author">O autorze</Link>
         </StyledLiItem>
-      </ul>
+      </StyledUl>
       <Switch>
         <Route path="/zadania">
           <Tasks />

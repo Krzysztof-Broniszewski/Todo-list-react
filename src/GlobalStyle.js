@@ -13,7 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     #root {
-        height: 100vh;
+        height: auto;
+        min-height:100vh;
         background-color: ${({ theme }) => theme.color.gallery};
     }
 `;

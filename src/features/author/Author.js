@@ -5,7 +5,7 @@ import Header from "../../common/Header";
 const author = () => (
   <Container>
     <Header
-      title="O autorze"
+      title="O Autorze"
     />
     <Section
       title="Krzysztof Broniszewski"

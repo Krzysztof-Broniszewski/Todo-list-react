@@ -7,7 +7,9 @@ import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
 import { Button } from "./Buttons/styled";
+import { StyledInput } from "./Search/styled";
 import { fetchExampleTasks } from "./taskSlice";
+import { SearchButton } from "./Search/styled";
 
 function Tasks() {
   const dispatch = useDispatch();
@@ -21,6 +23,15 @@ function Tasks() {
           <Button theme={theme} onClick={() => dispatch(fetchExampleTasks())}>
             Pobierz przykładowe zadania
           </Button>
+        }
+      />
+      <Section
+        title="Wyszukiwarka"
+        body={
+          <>
+            <StyledInput placeholder="Wyszukaj"></StyledInput>
+            <SearchButton theme={theme}>Szukaj</SearchButton>
+          </>
         }
       />
       <Section

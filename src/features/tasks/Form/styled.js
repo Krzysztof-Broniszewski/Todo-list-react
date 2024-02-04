@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledForm = styled.form`
     display: grid;
-    grid-gap: 20px;
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr;
 
@@ -12,12 +11,14 @@ export const StyledForm = styled.form`
 `;
 
 export const Input = styled.input`
+    margin-right: 20px;
     padding: 10px;
     border: 1px solid ${({ theme }) => theme.color.alto};
 `;
 
 export const FormButton = styled.button`
     cursor: pointer;
+    min-widh: 140px;
     background-color: ${({theme}) => theme.color.teal};
     border: none;
     color: white;
