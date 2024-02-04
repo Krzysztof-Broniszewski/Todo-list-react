@@ -5,16 +5,16 @@ import Header from "../../common/Header";
 const author = () => (
   <Container>
     <Header
-      title="O autorze"
+      title="O Autorze"
     />
     <Section
       title="Krzysztof Broniszewski"
       body={
-        <>nanana</>
+        <>Tu będą jakieś dane w przyszłości...</>
       }   
     />
     <Section
-      title="Opis"
+      title="CURRICULUM VITAE"
     />
   </Container>
 );
