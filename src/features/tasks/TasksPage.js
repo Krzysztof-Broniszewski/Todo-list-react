@@ -7,9 +7,8 @@ import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
 import { Button } from "./Buttons/styled";
-import { StyledInput } from "./Search/styled";
 import { fetchExampleTasks } from "./taskSlice";
-import { SearchButton } from "./Search/styled";
+import InputSearch from "./Search";
 
 function TasksPage() {
   const dispatch = useDispatch();
@@ -27,12 +26,7 @@ function TasksPage() {
       />
       <Section
         title="Wyszukiwarka"
-        body={
-          <>
-            <StyledInput placeholder="Wyszukaj"></StyledInput>
-            <SearchButton theme={theme}>Szukaj</SearchButton>
-          </>
-        }
+        body={<InputSearch />}
       />
       <Section
         title="Lista zadań"

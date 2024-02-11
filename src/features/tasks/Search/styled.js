@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const StyledInput = styled.input`
   margin-right: 20px;
-  width: 1fr;
   padding: 10px;
   border: 1px solid ${({ theme }) => theme.color.alto};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr;
-    margin-right: 0;
+    margin-right: 10;
   }
 `;
 
@@ -17,10 +16,15 @@ export const SearchButton = styled.button`
   min-width: 140px;
   background-color: ${({ theme }) => theme.color.teal};
   border: none;
-  color: white;
+  color: ${({ theme }) => theme.color.white};
   padding: 10px;
   flex-wrap: nowrap;
   border: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    flex-direction: row;
+    margin-right: 0;
+  }
 
   &:hover {
     filter: brightness(110%);

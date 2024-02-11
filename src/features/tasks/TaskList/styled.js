@@ -13,7 +13,7 @@ export const Item = styled.li`
     align-items: center;
     grid-gap: 10px;
     padding: 10px;
-    border-bottom: 1px solid ${({theme}) => theme.color.alto};
+    border-bottom: 1px solid ${({ theme }) => theme.color.alto};
 
     ${({ hidden }) => hidden && css`
         display: none;
@@ -54,26 +54,3 @@ export const Button = styled.button`
         transition-duration: 0s;
     }
 `;
-
-    
-
-    
-
-    
-// `;
-
-// export const RemoveButton = styled(Button)`
-//     background: ${({ theme }) => theme.color.crimson};
-
-//     &:hover {
-//         filter: brightness(120%);
-//         transform: scale(120%);
-//         transition-duration: .5s;
-//     }
-
-//     &:active {
-//         filter: brightness(140%);
-//         transition-duration: 0s;
-//     }
-// `;
-
