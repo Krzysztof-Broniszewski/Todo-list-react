@@ -1,39 +1,32 @@
-import { HashRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage";
 import Author from "./features/Author";
-import { StyledNav, StyledUl, StyledLiItem, StyledNavLink } from "./styled";
+import Navigation from "./common/Navigation";
 import TaskPage from "./features/tasks/TaskPage";
+import { toAuthor, toTask, toTasks } from "./routes";
 
 // eslint-disable-next-line
 export default () => (
   <Router>
-    <StyledNav>
-      <StyledUl>
-        <StyledLiItem>
-          <StyledNavLink activeClassName="active" to="/zadania">
-            Zadania
-          </StyledNavLink>
-        </StyledLiItem>
-        <StyledLiItem>
-          <StyledNavLink activeClassName="active" to="/author">
-            O autorze
-          </StyledNavLink>
-        </StyledLiItem>
-      </StyledUl>
-      <Switch>
-        <Route path="/zadania/:id">
-          <TaskPage />
-        </Route>
-        <Route path="/zadania">
-          <TasksPage />
-        </Route>
-        <Route path="/author">
-          <Author />
-        </Route>
-        <Route path="/">
-          <Redirect to="/zadania" />
-        </Route>
-      </Switch>
-    </StyledNav>
+    <Navigation />
+    <Switch>
+      <Route path={toTask()}>
+        <TaskPage />
+      </Route>
+      <Route path={toTasks()}>
+        <TasksPage />
+      </Route>
+      <Route path={toAuthor()}>
+        <Author />
+      </Route>
+      <Route>
+        <Redirect to={toTasks()} />
+      </Route>
+    </Switch>
   </Router>
 );
