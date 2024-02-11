@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link }  from "react-router-dom";
+import { NavLink }  from "react-router-dom";
 
 export const StyledNav = styled.nav`
   background: transparent;
@@ -29,12 +29,16 @@ export const StyledLiItem = styled.li`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   color: white;
-  font-weight: 400;
+  font-weight: 300;
 
-  &.active {
+  &:hover {
+    font-weight: 700;
+  }
+
+  &:active {
     font-weight: 700;
   }
   `

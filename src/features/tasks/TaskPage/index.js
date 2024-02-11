@@ -11,7 +11,7 @@ function TaskPage() {
   return (
     <Container>
       <Header title="Szczegóły zadania" />
-      <Section title={task ? task.content : "Nie znaleziono zadania"} body={task.done ? `Wykonane` : "Nie wykonane"} />
+      <Section title={task ? task.content : "Nie znaleziono zadania"} body={task && task.done ? `Wykonane` : "Nie wykonane"} />
     </Container>
   );
 }

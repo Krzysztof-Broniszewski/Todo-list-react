@@ -1,23 +1,23 @@
-import { HashRouter, Switch, Route, NavLink, Redirect } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage";
-import Author from "./features/author/Author";
-import { StyledNav, StyledUl, StyledLiItem } from "./styled";
+import Author from "./features/Author";
+import { StyledNav, StyledUl, StyledLiItem, StyledNavLink } from "./styled";
 import TaskPage from "./features/tasks/TaskPage";
 
 // eslint-disable-next-line
 export default () => (
-  <HashRouter>
+  <Router>
     <StyledNav>
       <StyledUl>
         <StyledLiItem>
-          <NavLink activeClassName="active" to="/zadania">
+          <StyledNavLink activeClassName="active" to="/zadania">
             Zadania
-          </NavLink>
+          </StyledNavLink>
         </StyledLiItem>
         <StyledLiItem>
-          <NavLink activeClassName="active" to="/author">
+          <StyledNavLink activeClassName="active" to="/author">
             O autorze
-          </NavLink>
+          </StyledNavLink>
         </StyledLiItem>
       </StyledUl>
       <Switch>
@@ -35,5 +35,5 @@ export default () => (
         </Route>
       </Switch>
     </StyledNav>
-  </HashRouter>
+  </Router>
 );
