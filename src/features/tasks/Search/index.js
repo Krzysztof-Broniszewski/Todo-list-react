@@ -7,26 +7,31 @@ const InputSearch = () => {
   const history = useHistory();
   const query = new URLSearchParams(location.search).get("szukaj");
 
-  const onInputChange = ({ target }) => {
+  const onChange = (event) => {
     const searchParams = new URLSearchParams(location.search);
+    console.log(searchParams);
+      if (event.value.trim() === "") {
+        searchParams.delete("szukaj");
+      } else {
+        searchParams.set("szukaj", event.target.value);
+      }
 
-    if (target.value.trim() === "") {
-      searchParams.delete("szukaj");
-    } else {
-      searchParams.set("szukaj", target.value);
-    }
+      history.push(`${location.pathname}?${searchParams.toString()}`);
+  };
 
-    history.push(`${location.pathname}?${searchParams.toString()}`);
+  const onSearch = (searchItem) => {
+    console.log(searchItem)
   };
 
   return (
     <>
       <StyledInput
+        type="text"
         placeholder="Wyszukaj zadania"
-        value={query || ""}
-        onChange={onInputChange}
+        value={query && ""}
+        onChange={onChange}
       />
-      <SearchButton theme={theme}>Szukaj</SearchButton>
+      <SearchButton theme={theme} onClick={() => onSearch(query)}>Szukaj</SearchButton>
     </>
   );
 };
