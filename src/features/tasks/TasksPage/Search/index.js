@@ -1,5 +1,4 @@
 import { useLocation, useHistory } from "react-router-dom";
-import { theme } from "../../../theme";
 import { SearchButton, StyledInput } from "./styled";
 
 const InputSearch = () => {
@@ -9,18 +8,18 @@ const InputSearch = () => {
 
   const onChange = (event) => {
     const searchParams = new URLSearchParams(location.search);
-    console.log(searchParams);
-      if (event.value.trim() === "") {
-        searchParams.delete("szukaj");
-      } else {
-        searchParams.set("szukaj", event.target.value);
-      }
 
-      history.push(`${location.pathname}?${searchParams.toString()}`);
+    if (event.value.trim() === "") {
+      searchParams.delete("szukaj");
+    } else {
+      searchParams.set("szukaj", event.target.value);
+    }
+
+    history.push(`${location.pathname}?${searchParams.toString()}`);
   };
 
   const onSearch = (searchItem) => {
-    console.log(searchItem)
+    console.log(searchItem);
   };
 
   return (
@@ -31,7 +30,7 @@ const InputSearch = () => {
         value={query && ""}
         onChange={onChange}
       />
-      <SearchButton theme={theme} onClick={() => onSearch(query)}>Szukaj</SearchButton>
+      <SearchButton onClick={() => onSearch(query)}>Szukaj</SearchButton>
     </>
   );
 };

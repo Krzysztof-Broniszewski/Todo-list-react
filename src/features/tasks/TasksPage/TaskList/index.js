@@ -5,9 +5,9 @@ import {
   selectHideDone,
   toggleTaskDone,
   removeTask,
-} from "../taskSlice";
+} from "../../taskSlice";
 import { Link } from "react-router-dom";
-import { toTask } from "../../../routes";
+import { toTask } from "../../../../routes";
 
 const TaskList = () => {
   const tasks = useSelector(selectTasks);
