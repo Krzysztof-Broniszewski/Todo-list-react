@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { NavLink }  from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const activeClassName = "link-active";
 
 export const StyledNav = styled.nav`
   background: transparent;
@@ -29,16 +31,19 @@ export const StyledLiItem = styled.li`
   }
 `;
 
-export const StyledNavLink = styled(NavLink)`
+export const StyledNavLink = styled(NavLink).attrs(() => ({
+  activeClassName,
+}))`
   text-decoration: none;
-  color: white;
+  color: ${({theme}) => theme.color.white};
   font-weight: 300;
 
   &:hover {
     font-weight: 700;
   }
 
-  &:active {
+  &.${activeClassName} {
     font-weight: 700;
+    border-bottom : 1px solid; 
   }
-  `
+`;
