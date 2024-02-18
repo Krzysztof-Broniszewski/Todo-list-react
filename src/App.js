@@ -4,7 +4,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import TasksPage from "./features/tasks/TasksPage";
+import TasksPage from "./features/tasks/TasksPage/TasksPage";
 import Author from "./features/Author";
 import Navigation from "./common/Navigation";
 import TaskPage from "./features/tasks/TaskPage";
@@ -29,4 +29,4 @@ export default () => (
       </Route>
     </Switch>
   </Router>
-);
+ );
