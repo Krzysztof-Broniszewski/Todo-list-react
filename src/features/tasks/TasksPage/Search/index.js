@@ -28,7 +28,7 @@ const InputSearch = () => {
         type="text"
         placeholder="Wyszukaj zadania"
         value={query && ""}
-        onChange={onChange}
+        onChange={() => onChange(query)}
       />
       <SearchButton onClick={() => onSearch(query)}>Szukaj</SearchButton>
     </>
