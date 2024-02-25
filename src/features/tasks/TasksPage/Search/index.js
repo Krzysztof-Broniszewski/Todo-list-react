@@ -5,12 +5,12 @@ import {
 import { SearchButton, StyledInput } from "./styled";
 
 const InputSearch = () => {
-  const query = useQueryParameter("query") || "";
+  const query = useQueryParameter("szukaj");
   const replaceQueryParameter = useReplaceQueryParameter();
 
   const handleInputChange = ({ target }) => {
     replaceQueryParameter({
-      key: "query", value: target.value.trim() !== "" ? target.value : undefined,
+      key: "szukaj", value: target.value.trim() !== "" ? target.value : undefined,
     });
   };
 
@@ -19,7 +19,7 @@ const InputSearch = () => {
         <StyledInput
           type="text"
           placeholder="Wyszukaj zadania"
-          value={query}
+          value={query || ""}
           onChange={handleInputChange}
         />
         <SearchButton onClick={handleInputChange}>Szukaj</SearchButton>
