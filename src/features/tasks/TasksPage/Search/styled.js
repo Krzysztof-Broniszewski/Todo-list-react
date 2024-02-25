@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledInput = styled.input`
-  margin-right: 20px;
   padding: 10px;
   border: 1px solid ${({ theme }) => theme.color.alto};
 

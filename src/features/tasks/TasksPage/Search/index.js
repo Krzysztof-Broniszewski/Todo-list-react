@@ -3,15 +3,17 @@ import {
   useReplaceQueryParameter,
 } from "../../queryParameters";
 import { SearchButton, StyledInput } from "./styled";
+import searchQueryParamName from "../searchQueryParamName";
 
 const InputSearch = () => {
-  const query = useQueryParameter("szukaj");
+  const query = useQueryParameter(searchQueryParamName);
   const replaceQueryParameter = useReplaceQueryParameter();
 
   const handleInputChange = ({ target }) => {
     replaceQueryParameter({
-      key: "szukaj", value: target.value.trim() !== "" ? target.value : undefined,
+      key: searchQueryParamName, value: target.value.trim() !== "" ? target.value : undefined,
     });
+    console.log(target.value);
   };
 
     return (
@@ -22,7 +24,6 @@ const InputSearch = () => {
           value={query || ""}
           onChange={handleInputChange}
         />
-        <SearchButton onClick={handleInputChange}>Szukaj</SearchButton>
       </>
     );
   };
