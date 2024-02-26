@@ -30,7 +30,6 @@ export const FormButton = styled.button`
     border: none;
     color: white;
     padding: 10px;
-    /* flex-wrap: nowrap; */
     border: none;
 
     &:hover {

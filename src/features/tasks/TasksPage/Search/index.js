@@ -2,7 +2,7 @@ import {
   useQueryParameter,
   useReplaceQueryParameter,
 } from "../../queryParameters";
-import { SearchButton, StyledInput } from "./styled";
+import { StyledInput } from "./styled";
 import searchQueryParamName from "../searchQueryParamName";
 
 const InputSearch = () => {
@@ -13,14 +13,13 @@ const InputSearch = () => {
     replaceQueryParameter({
       key: searchQueryParamName, value: target.value.trim() !== "" ? target.value : undefined,
     });
-    console.log(target.value);
   };
 
     return (
       <>
         <StyledInput
           type="text"
-          placeholder="Wyszukaj zadania"
+          placeholder="Filtruj zadania"
           value={query || ""}
           onChange={handleInputChange}
         />
