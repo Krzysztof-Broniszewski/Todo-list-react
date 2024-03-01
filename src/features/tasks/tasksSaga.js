@@ -19,7 +19,7 @@ export function* saveTasksInLocalStorageHandler() {
   yield call(saveTasksInLocalStorage, tasks);
 }
 
-export function* tasksSaga() {
+export function* watchFetchExampleTasks() {
   yield takeLatest(fetchExampleTasks.type, fetchExampleTasksHandler);
-  yield takeEvery("*", saveTasksInLocalStorage)
+  yield takeEvery("*", saveTasksInLocalStorageHandler)
 }
