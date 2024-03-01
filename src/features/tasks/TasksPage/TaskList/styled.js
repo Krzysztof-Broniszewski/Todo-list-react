@@ -34,7 +34,7 @@ export const Content = styled.span`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.color.teal};
 `;
 
 export const Button = styled.button`
