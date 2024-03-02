@@ -5,7 +5,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage/TasksPage";
-import Author from "./features/Author";
+import AuthorPage from "./features/AuthorPage";
 import Navigation from "./common/Navigation";
 import TaskPage from "./features/tasks/TaskPage";
 import { toAuthor, toTask, toTasks } from "./routes";
@@ -22,7 +22,7 @@ export default () => (
         <TasksPage />
       </Route>
       <Route path={toAuthor()}>
-        <Author />
+        <AuthorPage />
       </Route>
       <Route>
         <Redirect to={toTasks()} />
