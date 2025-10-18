@@ -10,7 +10,9 @@ const AuthorPage = () => (
     <Section
       title="Krzysztof Broniszewski"
       body={
-        <>Tu będą jakieś dane w przyszłości...</>
+        <><a href="https://krzysztof-broniszewski.github.io/krzysztof-cv/" target="_blank">
+          View my online CV / portfolio
+        </a></>
       }   
     />
     <Section
