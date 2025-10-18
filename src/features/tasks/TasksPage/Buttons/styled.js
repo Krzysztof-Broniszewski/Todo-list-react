@@ -13,8 +13,7 @@ export const Button = styled.button`
     }
 
     &:hover {
-        filter: brightness(110%);
-        transform: scale(115%);
+        filter: brightness(120%);
         transition-duration: .5s;
     }
 
